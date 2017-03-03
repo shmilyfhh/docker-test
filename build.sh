@@ -2,7 +2,7 @@
 
 
 #loop over all the files containing scater objects
-wget https://scrnaseq-public-datasets.s3.amazonaws.com/scater-objects/biase.rds
-
-Rscript estimate_k.R biase.rds k_estimation.tsv
+for file in *rds ; do
+    Rscript estimate_k.R $file k_estimation.tsv
+done
 
